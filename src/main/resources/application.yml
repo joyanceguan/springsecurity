@@ -58,6 +58,8 @@ mybatis:
   mapper-locations: classpath:mappers/*/*.xml
   # 别名扫描包
   type-aliases-package: com.joyance.springsecurity.persistence
+  # 枚举配置
+  typeHandlersPackage: com.joyance.springsecurity.typehandler
   # 输出SQL执行语句
   configuration:
     log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
