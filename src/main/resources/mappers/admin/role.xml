@@ -1,10 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="com.joyance.springsecurity.mapper.UserMapper">
+<mapper namespace="com.joyance.springsecurity.mapper.RoleMapper">
   
-	
-	<delete id="deleteById">
-	   delete from config where id = #{id}
-	</delete>
-	
+     <insert id="save" parameterType="role" keyProperty="id" useGeneratedKeys="true">
+         insert into role
+         (
+            role_name,
+            create_time,
+            update_time
+         )
+         values
+         ( 
+            #{role_name},
+            now(),
+            now()
+         )
+     </insert>
+     
+     <delete id="deleteById">
+         delete from role where id = #{id}
+     </delete>
+     	
 </mapper>

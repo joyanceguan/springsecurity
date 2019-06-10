@@ -8,6 +8,4 @@ public interface UserMapper {
 	
 	public int save(User user);
 	
-	public int update(User user);
-	
 }

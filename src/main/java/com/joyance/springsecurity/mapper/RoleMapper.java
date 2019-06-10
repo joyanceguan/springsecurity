@@ -6,4 +6,6 @@ public interface RoleMapper {
 
 	public int saveRole(Role role);
 	
+	public int deleteById(int id);
+	
 }

@@ -11,12 +11,14 @@
        insert into user
            username,
            password,
+           status,
            create_time,
            update_time
        values 
        (
            #{username},
            #{password},
+           #{status},
            now(),
            now()
        )
